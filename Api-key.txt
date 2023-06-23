@@ -1,0 +1,5 @@
+# Discord, Virus total, Hunterio, ipgeolocation APIs ARE REQUIRED ## They have Free API #
+Discord_api =
+VirusTotal_api =
+Hunterio_api =
+ipgeolocation_api =
