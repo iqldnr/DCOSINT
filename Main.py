@@ -64,7 +64,7 @@ def take_all_links_dm(dom):
         if line.strip() != "":
             result2.append(line)
 
-    with open(f'fnl_res.txt', 'a') as f:
+    with open(f'all-links.txt', 'a') as f:
         if result2:
             f.write(f"\nHOST That Has Been Founded:\n")
             for line in result2:
@@ -93,10 +93,10 @@ def take_all_links_ip(dom):
         if line.strip() != "":
             result2.append(line)
 
-    with open(f'fnl_res.txt', 'w') as f:
+    with open(f'all-links.txt', 'w') as f:
             f.write("")
 
-    with open(f'fnl_res.txt', 'a') as f:
+    with open(f'all-links.txt', 'a') as f:
         if result2:
             f.write(f"IP That Has Been Founded:\n")
             for line in result2:
@@ -703,8 +703,9 @@ async def osint(ctx):
                 time_c = datetime.datetime.strptime(time, "%Y%m%d")
             
         await ctx.send("Analyzing!!!, please wait...")
+
         with open(f'fnl_res.txt', 'w') as f:
-            f.write(f"")
+            f.write("")
         analyzer_txt(dom)
 
 
