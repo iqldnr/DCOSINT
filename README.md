@@ -42,8 +42,11 @@ Option to run the program (In Discord):
 
 
 -p meaning people to find a username registered in wich site, im using sherlock to run this command.
+
 -d meaning domain to do lookup and finding information about the domain or IP, but better with domain. with -d program will do scanning virustotal, whois, theharvester, hunterio, and geolocation.
+
 -sh meaning shodan it is optional on -d parameter because of it need paid shodan api to get the information
+
 -wb meaning wayback machine, this thing will do screenshot on web archive result. we need to input past date, this thing will do looping until curent date with interval 1 year.
 
 
