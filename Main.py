@@ -586,7 +586,7 @@ async def osint(ctx):
     message = ctx.message.content
     message = message.split()
 
-    if len(message) == 1 or "-h" in message or "-help" in message or message[2] != "-p" and message != "-d":
+    if len(message) == 1 or "-h" in message or "-help" in message:
         await ctx.send(f"Ini menu help!\n-h/-help     : display help menu\n-p <username>          : this will do username checking on few sites\n-d <domain or IP>   : this will do bunch of lookup detail\n-wh <yyyymmdd>  : Wayback Machine need to run with -d command\n-sh <api>   : This will do query on shodan and need torun with -d command\nNote: -wh and -sh are option to do further operation of -d")
     
     elif "-p" in message and message.index("-p") != len(message)-1:
@@ -711,7 +711,8 @@ async def osint(ctx):
 
         await ctx.send("Result: ", file=discord.File(f"fnl_res.txt"))
         await ctx.send("Result: ", file=discord.File(f"all-links.txt"))
-    
+    else:
+        await ctx.send(f"Ini menu help!\n-h/-help     : display help menu\n-p <username>          : this will do username checking on few sites\n-d <domain or IP>   : this will do bunch of lookup detail\n-wh <yyyymmdd>  : Wayback Machine need to run with -d command\n-sh <api>   : This will do query on shodan and need torun with -d command\nNote: -wh and -sh are option to do further operation of -d")
     await ctx.send("All Done!")
 
 
