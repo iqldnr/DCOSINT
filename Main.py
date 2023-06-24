@@ -564,7 +564,7 @@ def virus_total_URL(data, api):
     else:
         print("failed to run virus total")
 
-
+#funsi utama
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 @bot.event
 async def on_ready():
@@ -709,8 +709,9 @@ async def osint(ctx):
         analyzer_txt(dom)
 
 
-    await ctx.send("Result: ", file=discord.File(f"fnl_res.txt"))
-    await ctx.send("Result: ", file=discord.File(f"all-links.txt"))
+        await ctx.send("Result: ", file=discord.File(f"fnl_res.txt"))
+        await ctx.send("Result: ", file=discord.File(f"all-links.txt"))
+    
     await ctx.send("All Done!")
 
 
