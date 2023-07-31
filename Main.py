@@ -399,10 +399,10 @@ def sher_lock(name):
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = process.communicate()
     if process.returncode == 0:
-        print("theHarvester executed successfully!")
+        print("sherlock executed successfully!")
         return True
     else:
-        print(f"theHarvester failed with error code {process.returncode}:")
+        print(f"sherlock failed with error code {process.returncode}:")
         print(stderr.decode())
         return False
 
@@ -500,14 +500,14 @@ def who_is(web):
         if extract_whois() == True:
             return True
         else:
-            if who_is(web) == True:
+            if who_is_2(web) == True:
                 return True
             else:
                 return False
     else:
         return stderr
 
-def who_is(url):
+def who_is_2(url):
     
     with open('hasil3.txt', 'w') as f:
         f.write("")
